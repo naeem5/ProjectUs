@@ -1,0 +1,81 @@
+<div class="example-form">
+    <mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Fill out your info</ng-template>
+          <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <input matInput placeholder="First name" 
+                      formControlName="firstname" 
+                       required >
+              </mat-form-field>
+            </td>
+    
+              <td><mat-form-field class="example-full-width">
+                <input matInput 
+                       placeholder="Last name" 
+                       formControlName="lastname" 
+                       required >
+              </mat-form-field></td></tr>
+         </table>
+              <table class="example-full-width" cellspacing="0"><tr>
+                  <td><mat-form-field class="example-full-width">
+                      <input matInput placeholder="Enter your email"
+                            formControlName="emailclient"
+                            required>
+                  </mat-form-field></td>
+
+                  <td><mat-form-field class="example-full-width">
+                    <input matInput placeholder="Address" 
+                           formControlName="addressclient" 
+                           required >
+                  </mat-form-field></td>
+
+           </tr></table>
+
+           <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width">
+              <input matInput placeholder="Role" 
+                     formControlName="roleclient"
+                     required>
+            </mat-form-field></td>
+          </tr> </table>
+           <div>
+            <button mat-button (click)="stepper.reset()" class="btn ">Reset</button>
+          <button type="submit" class="btn" (click)="bothFunctn()">Update</button>
+          </div>
+        </form>
+      </mat-step>
+      <!-- <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out please</ng-template>
+          <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <input matInput placeholder="Address" 
+                       formControlName="addressclient" 
+                       required >
+              </mat-form-field></td>
+    
+              <td><mat-form-field class="example-full-width">
+                <input matInput placeholder="Role" 
+                       formControlName="roleclient"
+                       required>
+              </mat-form-field></td></tr>
+            </table>
+          <div>
+            <button mat-button matStepperPrevious class="btn">Back</button>
+            <button mat-button matStepperNext class="btn">Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        You are now done.
+        <div>
+          <button mat-button matStepperPrevious class="btn">Back</button>
+          <button mat-button (click)="stepper.reset()" class="btn ">Reset</button>
+          <button type="submit" class="btn" (click)="updateClient()">Update</button>
+        </div>
+      </mat-step> -->
+    </mat-horizontal-stepper>
+    </div>

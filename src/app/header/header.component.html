@@ -1,0 +1,43 @@
+<nav>  
+    <div class="nav-wrapper">
+      <a routerLink="/" class="brand-logo">Projectus</a>
+      <ul class="toggle">
+        <li><a><i class="material-icons mar-left" (click)="ontoggleOpen()">menu</i></a></li>
+        <li>
+          <a><input matInput placeholder="search"></a>
+      </li>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">   
+          <li><a routerLink="/signup">Register</a></li>
+          <li><a routerLink="/signin">Login</a></li>     
+        <li><a ><i class="material-icons">contact_mail</i></a></li>
+        <li><a ><i class="material-icons">notifications</i></a></li>
+        <li><a ><i class="material-icons">message</i></a></li>
+        <li>Naeem</li>
+        <li>
+          <a mat-icon-button [matMenuTriggerFor]="menu">
+          <i class="material-icons" [matMenuTriggerFor]="menu">person</i>
+          </a>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>person</mat-icon>
+                <span>Profile</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>settings</mat-icon>
+                <span>Account Setting</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>email</mat-icon>
+                <span>Mail Box</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>power_settings_new</mat-icon>
+                <span>Logout</span>
+              </button>
+            </mat-menu>
+        </li>
+        <li><a ><i class="material-icons">settings</i></a></li>
+      </ul>
+    </div>
+  </nav> 

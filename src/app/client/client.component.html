@@ -1,0 +1,52 @@
+<div class="example-container mat-elevation-z8 martable">
+    <div class="example-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+      </div>
+      
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="no">
+      <mat-header-cell *matHeaderCellDef>No.</mat-header-cell>
+      <mat-cell *matCellDef="let item; let i = index;" >{{i + 1}}</mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="fname">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>First Name </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{item.fname}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="lname">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{item.lname}}</mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="cemail">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+        <mat-cell *matCellDef="let item">{{item.cemail}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="crole">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Role</mat-header-cell>
+          <mat-cell *matCellDef="let item">{{item.crole}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+            <mat-cell *matCellDef="let item">
+                <i class="material-icons" (click)="onEdit(item)">mode_edit</i>
+                <i class="material-icons" (click)="onRemove(item)">delete_forever</i>
+            </mat-cell>
+        </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator #paginator
+                 [pageSize]="10"
+                 [pageSizeOptions]="[1,5, 10, 20]"
+                 [showFirstLastButtons]="true">
+  </mat-paginator>
+</div> 

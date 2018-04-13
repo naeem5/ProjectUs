@@ -1,0 +1,99 @@
+
+<div class="example-form">
+  <mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your info</ng-template>
+        <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width">
+              <input matInput 
+                     placeholder="Name" 
+                     formControlName="firstCtrl" 
+                     required [(ngModel)]="name">
+            </mat-form-field></td>
+  
+            <td><mat-form-field class="example-full-width">
+              <input matInput 
+                     placeholder="Status" 
+                     formControlName="firstCtrl" 
+                     required [(ngModel)]="status" >
+            </mat-form-field></td></tr>
+          </table>
+            <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                    <input matInput 
+                           placeholder="Milestone" 
+                           formControlName="firstCtrl" 
+                           required [(ngModel)]="milestone" >
+                </mat-form-field></td>
+      
+                <td><mat-form-field class="example-full-width">
+                  <input matInput placeholder="Language"
+                         formControlName="firstCtrl"
+                         required [(ngModel)]="language" >
+              </mat-form-field></td>
+            </tr></table>
+         <div>
+          <button mat-button matStepperNext class="btn">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out please</ng-template>
+
+        <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width">
+              <input matInput 
+                     placeholder="Amount" 
+                     formControlName="secondCtrl" 
+                     required [(ngModel)]="amount">
+            </mat-form-field></td>
+  
+            <td><mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Description" 
+                        matTextareaAutosize matAutosizeMinRows="2"
+                        formControlName="secondCtrl" 
+                        matAutosizeMaxRows="5" 
+                        [(ngModel)]="description">
+              </textarea>
+            </mat-form-field></td></tr>
+            <tr><td>
+            <mat-form-field>
+              <input matInput [matDatepicker]="pickerstart" 
+                     formControlName="secondCtrl" 
+                     placeholder="Start date" 
+                     [(ngModel)]="startdate">
+              <mat-datepicker-toggle matSuffix [for]="pickerstart"></mat-datepicker-toggle>
+              <mat-datepicker #pickerstart></mat-datepicker>
+            </mat-form-field></td>
+
+            <td><mat-form-field>
+              <input matInput [matDatepicker]="picker" 
+                      formControlName="secondCtrl" 
+                      placeholder="End date" 
+                      [(ngModel)]="enddate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field></td>
+          </tr>
+          </table>
+        <div>
+          <button mat-button matStepperPrevious class="btn">Back</button>
+          <button mat-button matStepperNext class="btn">Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious class="btn">Back</button>
+        <button mat-button (click)="stepper.reset()" class="btn ">Reset</button>
+        <button type="submit" class="btn" (click)="submit(item);">Submit</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+  </div>

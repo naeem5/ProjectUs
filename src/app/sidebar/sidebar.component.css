@@ -1,0 +1,64 @@
+.side-nav{
+    width: 30%;
+    background: crimson;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center; 
+}
+
+.mat-sidenav {
+    background-color: green;
+    height: 100vh;
+    position: fixed;
+    top: 64px;
+}
+
+.material-icons{
+    padding: 5px;
+    margin: 5px;
+}
+
+.material-icons{
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.mat-drawer {
+    background-color:whitesmoke;
+    height: 100vh;
+    position: fixed;
+    top: 64px;
+    width: 15%;
+    color: rgba(0,0,0,.87);
+}
+
+.martop{
+    margin-top: 5px;
+}
+
+.marbtm{
+    margin-top: 10px;
+}
+
+.mat-drawer{
+    background: #fff;
+}
+
+.mat-drawer a{
+    color: #666;
+    transition: .5s all;
+}
+
+.mat-drawer a:hover{
+    color: #333;
+}
+
+.mat-drawer .material-icons {
+    font-size: 25px;
+}
+
+
+    

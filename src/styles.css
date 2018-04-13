@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.mat-form-field-underline {
+    position: absolute;
+    height: 0px !important;
+    width: 100%;
+}
+.mat-form-field-subscript-wrapper {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+.subscript-wrapper {
+  font-size: 75%;
+  margin-top: .54167em;
+  top: calc(100% - 1.66667em);
+}
+
+.cdk-column-action i{
+  cursor: pointer;
+}

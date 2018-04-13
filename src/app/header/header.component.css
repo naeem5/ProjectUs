@@ -1,0 +1,53 @@
+.brand-logo{
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+nav{
+    position:fixed; 
+    z-index:999;
+}
+
+.mar-left{
+    margin-left: 160px;
+}
+
+.nav-wrapper{
+    background-color: #00c292;
+}
+
+.navfix{
+    position: fixed;
+}
+
+nav {
+    color: black;
+    background-color: whitesmoke;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    width: 140px;
+    margin-left: 25px;
+    margin-right: 10px;
+    background-color :#03A9F3;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+    cursor: pointer; 
+}
+
+.martop{
+    margin-top: 5px;
+}
+
+.fontsize{
+    font-size: 20px;
+
+}
+
+.marginLeft{
+    margin-left: 15%;
+}

@@ -1,0 +1,31 @@
+
+  <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened="{{toggleVal}}">
+        <ul>
+          <li class="martop">
+            <a routerLink="/">
+              <i (click)="selectedToggle()" class="material-icons">dashboard</i>Dashboard</a>
+          </li>
+          <li><a routerLink="/client"><i class="material-icons">perm_identity</i>Client</a>
+          </li>
+          <li><a routerLink="/project"><i class="material-icons">group_work</i>Project</a>
+          </li>
+          <li><a routerLink="/developer"><i class="material-icons">assignment_ind</i>Developer</a>
+          </li>
+          <li><a routerLink="/reports"><i class="material-icons">report</i>Reports</a>
+          </li>
+          <li><a routerLink="/invoice"><i class="material-icons">receipt</i>Invoices</a>
+          </li>  
+       </ul>
+        <mat-list>
+            <mat-list-item *ngFor="let message of messages">
+              <mat-icon matListIcon>folder</mat-icon>
+              <h3 matLine> {{message.from}} </h3>
+              <p matLine>
+                <span> {{message.subject}} </span>
+                <span class="demo-2"> -- {{message.content}} </span>
+              </p>
+            </mat-list-item>
+          </mat-list>
+      </mat-drawer>
+  </mat-drawer-container>

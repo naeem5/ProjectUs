@@ -1,0 +1,30 @@
+nav{
+    position:fixed;
+    z-index:999; 
+    margin-top:65px; 
+    width:85%; 
+    margin-left:15%;    
+}
+
+.breadcrumb {
+    color: black;
+}
+.btn {
+    text-decoration: none;
+    color: #fff;
+    width: 150px;
+    margin-left: 25px;
+    margin-right: 10px;
+    background-color :#03A9F3;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+    cursor: pointer; 
+}
+
+nav {
+    background: #fff;
+    box-shadow: none;
+    border: none;
+}

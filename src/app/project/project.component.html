@@ -1,0 +1,91 @@
+<!--<table class="table table-bordered table-striped table set-table class="example-container mat-elevation-z8"">
+    <thead>
+        <tr>
+            <th> First Name </th>
+            <th> Last Name </th>
+            <th> Email </th>
+            <th> Role </th>           
+            <th> Addess </th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items | async">
+        <td>{{item.firstname}}</td>
+        <td>{{item.lastname}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.role}}</td>
+        <td>{{item.address}}</td>
+      </tr>    
+    </tbody>
+</table> -->
+
+<div class="example-container mat-elevation-z8">
+    <div class="example-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+      </div>
+
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="no">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let item; let i = index;"> {{i + 1}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{item.name}} </mat-cell>
+    </ng-container>
+
+      <!-- Name Column -->
+    <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.status}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="milestone">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Milestone</mat-header-cell>
+          <mat-cell *matCellDef="let item"> {{item.milestone}} </mat-cell>
+        </ng-container>
+  
+      <ng-container matColumnDef="language">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Language</mat-header-cell>
+        <mat-cell *matCellDef="let item "> {{item.language}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="startdate">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Start Date </mat-header-cell>
+          <mat-cell *matCellDef="let item"> {{item.startdate}} </mat-cell>
+        </ng-container>
+
+      <ng-container matColumnDef="enddate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> End Date </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{item.enddate}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Amount </mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.amount}} </mat-cell>
+      </ng-container>
+
+    <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+        <mat-cell *matCellDef="let item">
+          <i class="material-icons" (click)="onEdit(item)">mode_edit</i>|
+          <i class="material-icons" (click)="onRemove(item)">delete_forever</i>
+           </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator #paginator
+                 [pageSize]="10"
+                 [pageSizeOptions]="[1,5, 10, 20]"
+                 [showFirstLastButtons]="true">
+  </mat-paginator>
+</div> 

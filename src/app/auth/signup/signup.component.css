@@ -1,0 +1,34 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 37%;
+    margin-top: 20px;
+  }
+
+  .btn{
+    background: #00c292;
+  }
+  
+  .example-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 33%;
+    margin-top: 145px;
+    margin-bottom: 10px;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+  .registr{
+      font-size: 22px;
+      color: green;
+  }

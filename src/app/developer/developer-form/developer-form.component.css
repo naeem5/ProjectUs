@@ -1,0 +1,44 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 37%;
+    margin-top: 20px;
+  }
+  .mat-form-field {
+    display: block;
+    position: relative;
+    flex: auto;
+    margin-right: 50px;
+    min-width: 12px;
+    border-bottom: 0px;
+    /* margin-left: -1px; */
+}
+
+.btn, .btn-large {
+  text-decoration: none;
+  color: #fff;
+  background-color :#03A9F3;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  cursor: pointer; 
+}
+
+  .example-form {
+    flex-direction: column;
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 135px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .marLeft{
+    margin-left: 10px;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
